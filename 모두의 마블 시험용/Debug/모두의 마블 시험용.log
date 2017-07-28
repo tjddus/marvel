@@ -1,0 +1,4 @@
+﻿  GAME.cpp
+c:\users\samsung\documents\visual studio 2017\projects\모두의 마블 시험용\모두의 마블 시험용\game.cpp(14): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+  모두의 마블 시험용.vcxproj -> C:\Users\samsung\documents\visual studio 2017\Projects\모두의 마블 시험용\Debug\모두의 마블 시험용.exe
+  모두의 마블 시험용.vcxproj -> C:\Users\samsung\documents\visual studio 2017\Projects\모두의 마블 시험용\Debug\모두의 마블 시험용.pdb (Partial PDB)
