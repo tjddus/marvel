@@ -1,17 +1,16 @@
 #include <iostream>
-#include<string>
+#include <string>
 #include <Windows.h>
 #include "Map.h"
 #include "Map_detail.h"
-#include"player.h"
-#include"GAME.h"
+#include "player.h"
+#include "GAME.h"
 
 using namespace std;
 
-
 void gotoxy(int x, int y)
 {
-	COORD pos = { x,y };
+	COORD pos = {x, y};
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
 void setcolor(int color, int bgcolor)
@@ -23,19 +22,18 @@ void setcolor(int color, int bgcolor)
 	bgcolor &= 0xf;
 
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (bgcolor << 4) | color);
-
 }
 
-void Game::Setting_marvel ()
+void Game::Setting_marvel()
 {
-	setcolor(12,0);
+	setcolor(12, 0);
 	cout << "\t\t*******************************************************************************************" << endl;
 	cout << "\t\t*******************************************************************************************" << endl;
 	cout << "\t\t*******************************************************************************************" << endl;
 	cout << "\t\t*******************************************************************************************" << endl;
 	cout << "\t\t*******************************************************************************************" << endl;
 	cout << "\t\t*******************************************************************************************" << endl;
-	setcolor(15,0);
+	setcolor(15, 0);
 	cout << "\t\t\t                                                                                  " << endl;
 	cout << "\t\t\t                                                                                  " << endl;
 	cout << "\t\t\t***          ***       **       ******** **             ************ **          " << endl;
@@ -44,15 +42,15 @@ void Game::Setting_marvel ()
 	cout << "\t\t\t**     **     **    **    **    ********    **       **   *********  **            " << endl;
 	cout << "\t\t\t**            **   **********   ** **        **     **    *********  **            " << endl;
 	cout << "\t\t\t**            **  **        **  **  **        **   **     **         **             " << endl;
-	cout << "\t\t\t**            ** **          ** **   **        ** **      **         **                 "<< endl;
+	cout << "\t\t\t**            ** **          ** **   **        ** **      **         **                 " << endl;
 	cout << "\t\t\t**            ****            ****    ***       ***       ********** *************      " << endl;
 	cout << "\t\t\t                                                                                       " << endl;
 	cout << "\t\t" << endl;
-	setcolor(11,0);
+	setcolor(11, 0);
 	cout << "\t\t\t**********   * * **********  *                **     *        ********   **          " << endl;
 	cout << "\t\t\t       **    * *        **   *            ********** *              **   **         " << endl;
 	cout << "\t\t\t      **     * *      **     ***   **       **  **   *        *******    **       " << endl;
-	cout << "\t\t\t     **  ***** *    **  **   *     **        ****    *****        **     **    " << endl; 
+	cout << "\t\t\t     **  ***** *    **  **   *     **        ****    *****        **     **    " << endl;
 	cout << "\t\t\t    ***      * *  **      ** *                **     *           **      **   " << endl;
 	cout << "\t\t\t   ** **     * * *************     **    *************         **        **    " << endl;
 	cout << "\t\t\t  **   **    * *             *     **         *****  *         ************           " << endl;
@@ -68,21 +66,18 @@ void Game::Setting_marvel ()
 	MapImage_All();
 }
 
-
-
-
 void Game::Map_image1()
 {
-	cout << "¦®¦¬¦¬¦¬¦¬¦¯" ;
+	cout << "â”â”â”â”â”â”“";
 }
 
 void Game::Map_image2()
 {
-	cout << "¦­        ¦­" ;
+	cout << "â”ƒ        â”ƒ";
 }
 void Game::Map_image3()
 {
-	cout << "¦±¦¬¦¬¦¬¦¬¦°" ;
+	cout << "â”—â”â”â”â”â”›";
 }
 
 void Game::Map_image4()
@@ -151,20 +146,19 @@ void Game::Map_image7()
 void Game::MapImage_All()
 {
 	setcolor(15, 0);
-	string Space[24] = {"½ÃÀÛÁ¡","¹æÄÛ","º£ÀÌÂ¡","Å¸ÀÌÆäÀÌ","µÎ¹ÙÀÌ","Ä«ÀÌ·Î","¹«ÀÎµµ","µµÄì",
-						"½Ãµå´Ï","Ä«Áö³ë","Äù¹é","»óÆÄ¿ï·Î","CASH GAME","ÇÁ¶óÇÏ","º£¸¦¸°","¸ğ½ºÅ©¹Ù","Á¦³×¹Ù",
-						"·Î¸¶","¼¼°è¿©Çà","·±´ø","ÆÄ¸®","Ä«Áö³ë","´º¿å","¼­¿ï"};
+	string Space[24] = {"ì‹œì‘ì ", "ë°©ì½•", "ë² ì´ì§•", "íƒ€ì´í˜ì´", "ë‘ë°”ì´", "ì¹´ì´ë¡œ", "ë¬´ì¸ë„", "ë„ì¿„",
+						"ì‹œë“œë‹ˆ", "ì¹´ì§€ë…¸", "í€˜ë°±", "ìƒíŒŒìš¸ë¡œ", "CASH GAME", "í”„ë¼í•˜", "ë² ë¥¼ë¦°", "ëª¨ìŠ¤í¬ë°”", "ì œë„¤ë°”",
+						"ë¡œë§ˆ", "ì„¸ê³„ì—¬í–‰", "ëŸ°ë˜", "íŒŒë¦¬", "ì¹´ì§€ë…¸", "ë‰´ìš•", "ì„œìš¸"};
 
 	system("mode con:cols=100 lines=130");
-	//ÆÇ ¸¸µé±â
+	//íŒ ë§Œë“¤ê¸°
 	Map_image6();
 	for (int i = 12; i < 19; i++)
 	{
-		cout << "  " << Space[i]<< "   ";
+		cout << "  " << Space[i] << "   ";
 	}
 	Map_image7();
-	//Ã¹¹øÂ° ÁÙ
-
+	//ì²«ë²ˆì§¸ ì¤„
 
 	Map_image4();
 	cout << "  " << Space[11];
@@ -175,7 +169,7 @@ void Game::MapImage_All()
 	cout << "   " << Space[19];
 	Map_image5();
 
-	//µÎ¹øÂ° ÁÙ
+	//ë‘ë²ˆì§¸ ì¤„
 
 	Map_image4();
 	cout << "   " << Space[10];
@@ -186,7 +180,7 @@ void Game::MapImage_All()
 	cout << "   " << Space[20];
 	Map_image5();
 
-	//¼¼¹øÂ° ÁÙ
+	//ì„¸ë²ˆì§¸ ì¤„
 
 	Map_image4();
 	cout << "   " << Space[9];
@@ -197,7 +191,7 @@ void Game::MapImage_All()
 	cout << "   " << Space[21];
 	Map_image5();
 
-	//³×¹øÂ° ÁÙ
+	//ë„¤ë²ˆì§¸ ì¤„
 
 	Map_image4();
 	cout << "   " << Space[8];
@@ -208,7 +202,7 @@ void Game::MapImage_All()
 	cout << "   " << Space[22];
 	Map_image5();
 
-	//´Ù¼¸¹øÂ° ÁÙ
+	//ë‹¤ì„¯ë²ˆì§¸ ì¤„
 
 	Map_image4();
 	cout << "   " << Space[7];
@@ -219,12 +213,12 @@ void Game::MapImage_All()
 	cout << "   " << Space[23];
 	Map_image5();
 
-	//¿©¼¸¹øÂ° ÁÙ
+	//ì—¬ì„¯ë²ˆì§¸ ì¤„
 
 	Map_image6();
 	for (int i = 6; i >= 0; i--)
 	{
-		cout << "   " << Space[i]<< "   ";
+		cout << "   " << Space[i] << "   ";
 	}
 	Map_image7();
 }
@@ -250,41 +244,40 @@ void Game::Player_image(int Player_number, int Player_money)
 	if (Player_money < 0)
 	{
 		gotoxy(15, 7 + (5 * Player_number));
-		cout << "   ¦®¦¬ PLAYER" << Player_number + 1 << "¦¬¦¯" << endl;
+		cout << "   â”â” PLAYER" << Player_number + 1 << "â”â”“" << endl;
 		gotoxy(15, 8 + (5 * Player_number));
 		cout << endl;
 		gotoxy(15, 9 + (5 * Player_number));
-		cout << "   **** ÆÄ»ê ****" << endl;
+		cout << "   **** íŒŒì‚° ****" << endl;
 		gotoxy(15, 10 + (5 * Player_number));
 		cout << endl;
 		gotoxy(15, 11 + (5 * Player_number));
-		cout << "   ¦±¦¬¦¬¦¬¦¬¦¬¦¬¦°" << endl;
+		cout << "   â”—â”â”â”â”â”â”â”›" << endl;
 	}
 	else
 	{
-		gotoxy(15, 7+(5*Player_number));
-		cout << "   ¦®¦¬ PLAYER" << Player_number + 1 << "¦¬¦¯" << endl;
-		gotoxy(15, 8+ (5 * Player_number));
+		gotoxy(15, 7 + (5 * Player_number));
+		cout << "   â”â” PLAYER" << Player_number + 1 << "â”â”“" << endl;
+		gotoxy(15, 8 + (5 * Player_number));
 		cout << endl;
-		gotoxy(15, 9+ (5 * Player_number));
-		cout << "     µ· : " << Player_money << endl;
-		gotoxy(15, 10+ (5 * Player_number));
+		gotoxy(15, 9 + (5 * Player_number));
+		cout << "     ëˆ : " << Player_money << endl;
+		gotoxy(15, 10 + (5 * Player_number));
 		cout << endl;
-		gotoxy(15, 11+ (5 * Player_number));
-		cout << "   ¦±¦¬¦¬¦¬¦¬¦¬¦¬¦°" << endl;
+		gotoxy(15, 11 + (5 * Player_number));
+		cout << "   â”—â”â”â”â”â”â”â”›" << endl;
 	}
 	setcolor(15, 0);
 }
-//ÇöÀç ÇÃ·¹ÀÌ¾îÀÇ Àç»ê »óÅÂ¸¦ ¾ËÁ®ÁÖ´Â ÇÔ¼ö
+//í˜„ì¬ í”Œë ˆì´ì–´ì˜ ì¬ì‚° ìƒíƒœë¥¼ ì•Œì ¸ì£¼ëŠ” í•¨ìˆ˜
 
-
-void Game::PlayerLocation_image( int i,int k )
+void Game::PlayerLocation_image(int i, int k)
 {
 	if (i == 0)
 	{
 		setcolor(10, 0);
 	}
-	else if (i== 1)
+	else if (i == 1)
 	{
 		setcolor(11, 0);
 	}
@@ -296,73 +289,68 @@ void Game::PlayerLocation_image( int i,int k )
 	{
 		setcolor(13, 0);
 	}
-	if (0<=k&&k<6)
+	if (0 <= k && k < 6)
 	{
-		gotoxy(74 - k * 12+(2*i), 33);
+		gotoxy(74 - k * 12 + (2 * i), 33);
 	}
-	else if (6<=k&&k<12)
+	else if (6 <= k && k < 12)
 	{
-		gotoxy(2+(2*i), 33 - 5 * (k - 6));
+		gotoxy(2 + (2 * i), 33 - 5 * (k - 6));
 	}
-	else if (12<=k&&k<18)
+	else if (12 <= k && k < 18)
 	{
-		gotoxy(2 + 12 * (k - 12)+ (2 * i), 3);
+		gotoxy(2 + 12 * (k - 12) + (2 * i), 3);
 	}
-	else if (18<=k&&k<=23)
+	else if (18 <= k && k <= 23)
 	{
-		gotoxy(74+ (2 * i), 3 + 5 * (k - 18));
+		gotoxy(74 + (2 * i), 3 + 5 * (k - 18));
 	}
-	cout << i+1<<"p";
+	cout << i + 1 << "p";
 	setcolor(15, 0);
 }
-//ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡ »óÅÂ¸¦ ¾Ë·ÁÁÖ´Â ÇÔ¼ö
+//í”Œë ˆì´ì–´ì˜ ìœ„ì¹˜ ìƒíƒœë¥¼ ì•Œë ¤ì£¼ëŠ” í•¨ìˆ˜
 
-void Play_dice(int& random1,int& random2 )
+void Play_dice(int &random1, int &random2)
 {
 	int command = 0;
 	gotoxy(0, 35);
-	cout << "**********ÁÖ»çÀ§¸¦ ´øÁö°í ½Í´Ù¸é ¾Æ¹« ¼ıÀÚ³ª ´­·¯¿ä**********" << endl;
+	cout << "**********ì£¼ì‚¬ìœ„ë¥¼ ë˜ì§€ê³  ì‹¶ë‹¤ë©´ ì•„ë¬´ ìˆ«ìë‚˜ ëˆŒëŸ¬ìš”**********" << endl;
 	cin >> command;
-    random1 = rand() % 6 + 1;
-    random2 = rand() % 6 + 1;
+	random1 = rand() % 6 + 1;
+	random2 = rand() % 6 + 1;
 }
 
-//ÀÏ¹İÇàµ¿ ÁÖ»çÀ§ ±¼¸®±â
-
-
+//ì¼ë°˜í–‰ë™ ì£¼ì‚¬ìœ„ êµ´ë¦¬ê¸°
 
 void Game::GAME()
 {
-	Map* space0 = new Map_Start("½ÃÀÛÁ¡", 0, 750000);
-	Map* space1 = new Map_World("¹æÄÛ", 1, 50000, 25000, 75000, 125000, 125000, 4, 4, 4, 4, 4);
-	Map* space2 = new Map_World("º£ÀÌÂ¡", 2, 65000, 25000, 75000, 125000, 125000, 4, 4, 4, 4, 4);
-	Map* space3 = new Map_World("Å¸ÀÌÆäÀÌ", 3, 120000, 50000, 150000, 250000, 250000, 4, 4, 4, 4, 4);
-	Map* space4 = new Map_World("µÎ¹ÙÀÌ", 4, 120000, 50000, 150000, 250000, 250000, 4, 4, 4, 4, 4);
-	Map* space5 = new Map_World("Ä«ÀÌ·Î", 5, 135000, 50000, 150000, 250000, 250000, 4, 4, 4, 4, 4);
-	Map* space6 = new Map_Island("¹«ÀÎµµ", 6);
-	Map* space7 = new Map_World("µµÄì", 7, 180000, 75000, 225000, 375000, 375000, 4, 4, 4, 4, 4);
-	Map* space8 = new Map_World("½Ãµå´Ï", 8, 180000, 75000, 225000, 375000, 375000, 4, 4, 4, 4, 4);
-	Map* space9 = new Map_Casino("Ä«Áö³ë", 9, 250000);
-	Map* space10 = new Map_World("Äù¹é", 10, 235000, 100000, 300000, 500000, 500000, 4, 4, 4, 4, 4);
-	Map* space11 = new Map_World("»óÆÄ¿ï·Î", 11, 235000, 100000, 300000, 500000, 500000, 4, 4, 4, 4, 4);
-	Map* space12 = new Map_Cashgame("CASH GAME", 12, 500000);
-	Map* space13 = new Map_World("ÇÁ¶óÇÏ", 13, 295000, 125000, 375000, 625000, 625000, 4, 4, 4, 4, 4);
-	Map* space14 = new Map_World("º£¸¦¸°", 14, 310000, 125000, 375000, 625000, 625000, 4, 4, 4, 4, 4);
-	Map* space15 = new Map_World("¸ğ½ºÅ©¹Ù", 15, 350000, 150000, 450000, 750000, 750000, 4, 4, 4, 4, 4);
-	Map* space16 = new Map_World("Á¦³×¹Ù", 16, 365000, 150000, 450000, 750000, 750000, 4, 4, 4, 4, 4);
-	Map* space17 = new Map_World("·Î¸¶", 17, 365000, 150000, 450000, 750000, 750000, 4, 4, 4, 4, 4);
-	Map* space18 = new Map_Worldtour("¼¼°è¿©Çà", 18, 100000);
-	Map* space19 = new Map_World("·±´ø", 19, 410000, 175000, 525000, 875000, 875000, 4, 4, 4, 4, 4);
-	Map* space20 = new Map_World("ÆÄ¸®", 20, 425000, 175000, 525000, 875000, 875000, 4, 4, 4, 4, 4);
-	Map* space21 = new Map_Casino("Ä«Áö³ë", 21, 250000);
-	Map* space22 = new Map_World("´º¿å", 22, 480000, 200000, 600000, 1000000, 1000000, 4, 4, 4, 4, 4);
-	Map* space23 = new Map_World("¼­¿ï", 23, 500000, 200000, 600000, 1000000, 1000000, 4, 4, 4, 4, 4);
-
+	Map *space0 = new Map_Start("ì‹œì‘ì ", 0, 750000);
+	Map *space1 = new Map_World("ë°©ì½•", 1, 50000, 25000, 75000, 125000, 125000, 4, 4, 4, 4, 4);
+	Map *space2 = new Map_World("ë² ì´ì§•", 2, 65000, 25000, 75000, 125000, 125000, 4, 4, 4, 4, 4);
+	Map *space3 = new Map_World("íƒ€ì´í˜ì´", 3, 120000, 50000, 150000, 250000, 250000, 4, 4, 4, 4, 4);
+	Map *space4 = new Map_World("ë‘ë°”ì´", 4, 120000, 50000, 150000, 250000, 250000, 4, 4, 4, 4, 4);
+	Map *space5 = new Map_World("ì¹´ì´ë¡œ", 5, 135000, 50000, 150000, 250000, 250000, 4, 4, 4, 4, 4);
+	Map *space6 = new Map_Island("ë¬´ì¸ë„", 6);
+	Map *space7 = new Map_World("ë„ì¿„", 7, 180000, 75000, 225000, 375000, 375000, 4, 4, 4, 4, 4);
+	Map *space8 = new Map_World("ì‹œë“œë‹ˆ", 8, 180000, 75000, 225000, 375000, 375000, 4, 4, 4, 4, 4);
+	Map *space9 = new Map_Casino("ì¹´ì§€ë…¸", 9, 250000);
+	Map *space10 = new Map_World("í€˜ë°±", 10, 235000, 100000, 300000, 500000, 500000, 4, 4, 4, 4, 4);
+	Map *space11 = new Map_World("ìƒíŒŒìš¸ë¡œ", 11, 235000, 100000, 300000, 500000, 500000, 4, 4, 4, 4, 4);
+	Map *space12 = new Map_Cashgame("CASH GAME", 12, 500000);
+	Map *space13 = new Map_World("í”„ë¼í•˜", 13, 295000, 125000, 375000, 625000, 625000, 4, 4, 4, 4, 4);
+	Map *space14 = new Map_World("ë² ë¥¼ë¦°", 14, 310000, 125000, 375000, 625000, 625000, 4, 4, 4, 4, 4);
+	Map *space15 = new Map_World("ëª¨ìŠ¤í¬ë°”", 15, 350000, 150000, 450000, 750000, 750000, 4, 4, 4, 4, 4);
+	Map *space16 = new Map_World("ì œë„¤ë°”", 16, 365000, 150000, 450000, 750000, 750000, 4, 4, 4, 4, 4);
+	Map *space17 = new Map_World("ë¡œë§ˆ", 17, 365000, 150000, 450000, 750000, 750000, 4, 4, 4, 4, 4);
+	Map *space18 = new Map_Worldtour("ì„¸ê³„ì—¬í–‰", 18, 100000);
+	Map *space19 = new Map_World("ëŸ°ë˜", 19, 410000, 175000, 525000, 875000, 875000, 4, 4, 4, 4, 4);
+	Map *space20 = new Map_World("íŒŒë¦¬", 20, 425000, 175000, 525000, 875000, 875000, 4, 4, 4, 4, 4);
+	Map *space21 = new Map_Casino("ì¹´ì§€ë…¸", 21, 250000);
+	Map *space22 = new Map_World("ë‰´ìš•", 22, 480000, 200000, 600000, 1000000, 1000000, 4, 4, 4, 4, 4);
+	Map *space23 = new Map_World("ì„œìš¸", 23, 500000, 200000, 600000, 1000000, 1000000, 4, 4, 4, 4, 4);
 
 	Map *Space[24] = {
-		space0,space1,space2,space3,space4,space5,space6,space7,space8,space9,space10,space11,space12,space13
-		,space14,space15,space16,space17,space18,space19,space20,space21,space22,space23
-	};
+		space0, space1, space2, space3, space4, space5, space6, space7, space8, space9, space10, space11, space12, space13, space14, space15, space16, space17, space18, space19, space20, space21, space22, space23};
 	int Player_Number = 0;
 
 	setcolor(15, 0);
@@ -370,18 +358,16 @@ void Game::GAME()
 	{
 		while (1)
 		{
-			cout << "\t\t\t ¸î ¸íÀÌ ÇÃ·¹ÀÌÇÏ½Ã°Ú½À´Ï±î(**2-4¸í**) : ";
+			cout << "\t\t\t ëª‡ ëª…ì´ í”Œë ˆì´í•˜ì‹œê² ìŠµë‹ˆê¹Œ(**2-4ëª…**) : ";
 			cin >> Player_Number;
-			if (2 <= Player_Number&&Player_Number <= 4)
+			if (2 <= Player_Number && Player_Number <= 4)
 			{
 				break;
 			}
 		}
 		Player *player = new Player[Player_Number];
 		int *Player_Money = new int[Player_Number];
-		//ÇÃ·¹ÀÌ¾î ¼ö¸¸Å­ »ı¼º!!
-
-
+		//í”Œë ˆì´ì–´ ìˆ˜ë§Œí¼ ìƒì„±!!
 
 		for (int i = 0; i < Player_Number; i++)
 		{
@@ -393,12 +379,11 @@ void Game::GAME()
 			Player_Money[i] = 5000000;
 		}
 
-		int Toll = 0;//ÅëÇà·á
-		int Land_Owner = 0;//ÅëÇà·á¸¦ ¹ŞÀ» ¶¥ÀÇ ÁÖÀÎ
+		int Toll = 0;		//í†µí–‰ë£Œ
+		int Land_Owner = 0; //í†µí–‰ë£Œë¥¼ ë°›ì„ ë•…ì˜ ì£¼ì¸
 
-		//ÆÇ ¸¸µé±â
+		//íŒ ë§Œë“¤ê¸°
 		srand((unsigned int)time(NULL));
-
 
 		int Double_check = 0;
 
@@ -428,18 +413,17 @@ void Game::GAME()
 
 			int random1 = 0;
 			int random2 = 0;
-			//ÁÖ»çÀ§ ·£´ıº¯¼ö
-
+			//ì£¼ì‚¬ìœ„ ëœë¤ë³€ìˆ˜
 
 			if (player[i].GetPlayer_Turn() == 0)
 			{
-				Play_dice(random1,random2);
-				cout << "ÇÃ·¹ÀÌ¾î" << i + 1 << "ÀÇ ÁÖ»çÀ§ ´« : " << player[i].Player_Dice1(random1) << "  " << player[i].Player_Dice2(random2) << endl;
+				Play_dice(random1, random2);
+				cout << "í”Œë ˆì´ì–´" << i + 1 << "ì˜ ì£¼ì‚¬ìœ„ ëˆˆ : " << player[i].Player_Dice1(random1) << "  " << player[i].Player_Dice2(random2) << endl;
 				player[i].Setplayer_Location(player[i].Player_Dice1(random1), player[i].Player_Dice2(random2));
 				Player_Money[i] = player[i].Getplayer_Money();
 				if (player[i].Player_Dice1(random1) == player[i].Player_Dice2(random2))
 				{
-					cout << "\t\t**ÁÖ»çÀ§ ´õºí**" << endl;
+					cout << "\t\t**ì£¼ì‚¬ìœ„ ë”ë¸”**" << endl;
 					Double_check++;
 				}
 				else
@@ -448,45 +432,45 @@ void Game::GAME()
 				}
 			}
 
-			//¸ğµÎÀÇ ¸¶ºí¿¡¼­ÀÇ ÀÏ¹İ Çàµ¿
+			//ëª¨ë‘ì˜ ë§ˆë¸”ì—ì„œì˜ ì¼ë°˜ í–‰ë™
 
-			else if (player[i].GetPlayer_Turn() == -2||player[i].GetPlayer_Turn()==-1)
+			else if (player[i].GetPlayer_Turn() == -2 || player[i].GetPlayer_Turn() == -1)
 			{
 				Play_dice(random1, random2);
-				cout << "ÇÃ·¹ÀÌ¾î" << i + 1 << "ÀÇ ÁÖ»çÀ§ ´« : " << player[i].Player_Dice1(random1) << "  " << player[i].Player_Dice2(random2) << endl;
+				cout << "í”Œë ˆì´ì–´" << i + 1 << "ì˜ ì£¼ì‚¬ìœ„ ëˆˆ : " << player[i].Player_Dice1(random1) << "  " << player[i].Player_Dice2(random2) << endl;
 				if (player[i].Player_Dice1(random1) == player[i].Player_Dice2(random2))
 				{
-					cout << "ÁÖ»çÀ§°¡ ´õºíÀÔ´Ï´Ù.**¹«ÀÎµµ¿¡¼­ Å»ÃâÇÏ¼Ì¾î¿ä**" << endl;
+					cout << "ì£¼ì‚¬ìœ„ê°€ ë”ë¸”ì…ë‹ˆë‹¤.**ë¬´ì¸ë„ì—ì„œ íƒˆì¶œí•˜ì…¨ì–´ìš”**" << endl;
 					player[i].Setplayer_Location(player[i].Player_Dice1(random1), player[i].Player_Dice2(random2));
 					player[i].SetPlayer_Turn(0);
 				}
 			}
 
-			//¹«ÀÎµµ¿¡¼­ÀÇ ³²Àº 2ÅÏ
-			//¹«ÀÎµµ¿¡¼­ÀÇ ³²Àº 1ÅÏ
+			//ë¬´ì¸ë„ì—ì„œì˜ ë‚¨ì€ 2í„´
+			//ë¬´ì¸ë„ì—ì„œì˜ ë‚¨ì€ 1í„´
 
 			else if (player[i].GetPlayer_Turn() == 1)
 			{
 				gotoxy(0, 35);
-				cout << "1. ¼¼°è¿©ÇàÀ» °£´Ù." << endl;
-				cout << "2, ¼¼°è¿©ÇàÀ» °¡Áö ¾Ê´Â´Ù." << endl;
-				cout << "ÃëÇÏ°í ½ÍÀº Çàµ¿ÀÇ ¹øÈ£¸¦ Àû¾îÁÖ¼¼¿ä" << endl;
+				cout << "1. ì„¸ê³„ì—¬í–‰ì„ ê°„ë‹¤." << endl;
+				cout << "2, ì„¸ê³„ì—¬í–‰ì„ ê°€ì§€ ì•ŠëŠ”ë‹¤." << endl;
+				cout << "ì·¨í•˜ê³  ì‹¶ì€ í–‰ë™ì˜ ë²ˆí˜¸ë¥¼ ì ì–´ì£¼ì„¸ìš”" << endl;
 				cin >> command;
 				if (command == 1)
 				{
-					Map_Worldtour* Worldtour = (Map_Worldtour*)Space[18];
-					cout << "°¡°í ½ÍÀº ¿©ÇàÁö->";
+					Map_Worldtour *Worldtour = (Map_Worldtour *)Space[18];
+					cout << "ê°€ê³  ì‹¶ì€ ì—¬í–‰ì§€->";
 					cin >> map;
 					Worldtour->SetPlayer_Wantmap(map);
 					for (int k = 0; k < 24; k++)
 					{
 						if (Worldtour->GetPlayer_Wantmap().compare(Space[k]->GetMap_Name()) == 0)
 						{
-							if(0<=k&&k<18)
-							{ 
+							if (0 <= k && k < 18)
+							{
 								Player_Money[i] += 750000;
 							}
-							
+
 							player[i].SetWorldtour_Location(k);
 							player[i].SetPlayer_Turn(0);
 							for (int i = 0; i < Player_Number; i++)
@@ -499,19 +483,18 @@ void Game::GAME()
 				}
 				else
 				{
-					cout << "¼¼°è¿©ÇàÀ» °¡Áö ¸øÇß¾î¿ä¤Ğ¤Ğ¤Ğ" << endl;
+					cout << "ì„¸ê³„ì—¬í–‰ì„ ê°€ì§€ ëª»í–ˆì–´ìš”ã… ã… ã… " << endl;
 					player[i].SetPlayer_Turn(0);
 				}
 			}
 
-			//¼¼°è¿©Çà¿¡¼­ÀÇ ÅÏ
+			//ì„¸ê³„ì—¬í–‰ì—ì„œì˜ í„´
 
-			/*PlayerÀÇ ÅÏ¼ö 1)-2:¹«ÀÎµµ¿¡¼­ÀÇ 2ÅÏ
-							2)-1:¹«ÀÎµµ¿¡¼­ÀÇ 1ÅÏ
-							3)0:ÀÏ¹İÀûÀÎ ÅÏ
-							4)1:¼¼°è¿©Çà °¡±â
+			/*Playerì˜ í„´ìˆ˜ 1)-2:ë¬´ì¸ë„ì—ì„œì˜ 2í„´
+							2)-1:ë¬´ì¸ë„ì—ì„œì˜ 1í„´
+							3)0:ì¼ë°˜ì ì¸ í„´
+							4)1:ì„¸ê³„ì—¬í–‰ ê°€ê¸°
 			*/
-
 
 			for (int j = 0; j < 24; j++)
 			{
@@ -522,147 +505,146 @@ void Game::GAME()
 						PlayerLocation_image(i, player[i].Getplayer_Location());
 					}
 					gotoxy(0, 40);
-					cout << " ÇöÀç Player" << i + 1 << "ÀÇ À§Ä¡´Â " << Space[j]->GetMap_Name() << endl;
+					cout << " í˜„ì¬ Player" << i + 1 << "ì˜ ìœ„ì¹˜ëŠ” " << Space[j]->GetMap_Name() << endl;
 
-					//ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡ Ãâ·Â
+					//í”Œë ˆì´ì–´ì˜ ìœ„ì¹˜ ì¶œë ¥
 					if (j == 0)
 					{
-						Map_Start* Start = (Map_Start*)Space[j];
-						player[i].Setplayer_Money(Player_Money[i]+ Start->Pay());
-						cout << "**Æ¯¼öÇÑ ¸ÊÄ­À» Á¦¿ÜÇÑ Ä­ÀÇ ÀÌ¸§À» ½áÁÖ¼¼¿ä**---->";
+						Map_Start *Start = (Map_Start *)Space[j];
+						player[i].Setplayer_Money(Player_Money[i] + Start->Pay());
+						cout << "**íŠ¹ìˆ˜í•œ ë§µì¹¸ì„ ì œì™¸í•œ ì¹¸ì˜ ì´ë¦„ì„ ì¨ì£¼ì„¸ìš”**---->";
 						cin >> map;
 						Start->SetPlayer_Wantmap(map);
 						for (int k = 0; k < 24; k++)
 						{
 							if (Start->GetPlayer_Wantmap().compare(Space[k]->GetMap_Name()) == 0)
 							{
-								Map_World* Start_World = (Map_World*)Space[k];
+								Map_World *Start_World = (Map_World *)Space[k];
 								if (Start_World->GetLand_Owner() == i)
 								{
 									Start_World->Map_Construcion(i, Player_Money[i], Toll, k);
 								}
 								else
 								{
-									cout << "±× Ä­¿¡´Â °Ç¹°À» ÁöÀ» ¼ö ¾ø½À´Ï´Ù" << endl;
+									cout << "ê·¸ ì¹¸ì—ëŠ” ê±´ë¬¼ì„ ì§€ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤" << endl;
 								}
 							}
 						}
 						player[i].Setplayer_Money(Player_Money[i]);
 					}
 
-					//½ÃÀÛÁöÁ¡¿¡¼­ÀÇ ÅÏ
+					//ì‹œì‘ì§€ì ì—ì„œì˜ í„´
 
 					else if (j == 6)
 					{
 						Double_check = 0;
 						if (player[i].GetPlayer_Turn() == 0)
 						{
-							cout << "¸Å¼­¿î ÅÂÇ³À¸·Î ÀÎÇØ ¹«ÀÎµµ¿¡ ¶³¾îÁö¼Ì½À´Ï´Ù. **¹«ÀÎµµ¿¡¼­ 3ÅÏ°£ ±â´Ù¸®¼¼¿ä!" << endl;
+							cout << "ë§¤ì„œìš´ íƒœí’ìœ¼ë¡œ ì¸í•´ ë¬´ì¸ë„ì— ë–¨ì–´ì§€ì…¨ìŠµë‹ˆë‹¤. **ë¬´ì¸ë„ì—ì„œ 3í„´ê°„ ê¸°ë‹¤ë¦¬ì„¸ìš”!" << endl;
 							player[i].SetPlayer_Turn(-2);
 						}
 						else if (player[i].GetPlayer_Turn() == -2)
 						{
-							cout << "¾ÆÁ÷ ÅÂÇ³ÀÌ °¡½ÃÁö ¾Ê¾Ò¾Æ¿ä.**¹«ÀÎµµ¿¡¼­ 2ÅÏ°£ ±â´Ù¸®¼¼¿ä! " << endl;
+							cout << "ì•„ì§ íƒœí’ì´ ê°€ì‹œì§€ ì•Šì•˜ì•„ìš”.**ë¬´ì¸ë„ì—ì„œ 2í„´ê°„ ê¸°ë‹¤ë¦¬ì„¸ìš”! " << endl;
 							player[i].SetPlayer_Turn(-1);
 						}
 						else if (player[i].GetPlayer_Turn() == -1)
 						{
-							cout << "¾ÆÁ÷ ÅÂÇ³ÀÌ °¡½ÃÁö ¾Ê¾Ò¾î¿ä.**¹«ÀÎµµ¿¡¼­ 1ÅÏ°£ ±â´Ù¸®¼¼¿ä!" << endl;
+							cout << "ì•„ì§ íƒœí’ì´ ê°€ì‹œì§€ ì•Šì•˜ì–´ìš”.**ë¬´ì¸ë„ì—ì„œ 1í„´ê°„ ê¸°ë‹¤ë¦¬ì„¸ìš”!" << endl;
 							player[i].SetPlayer_Turn(0);
 						}
 					}
 
-					//¹«ÀÎµµ¿¡¼­ÀÇ ÅÏ
-
+					//ë¬´ì¸ë„ì—ì„œì˜ í„´
 
 					else if (j == 9 || j == 21)
 					{
-						Map_Casino* Casino = (Map_Casino*)Space[j];
+						Map_Casino *Casino = (Map_Casino *)Space[j];
 
-						cout << "******Ä«Áö³ë °ÔÀÓ******" << endl;
-						cout << "1-20»çÀÌÀÇ ¼ıÀÚ 4°³¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä" << endl;
+						cout << "******ì¹´ì§€ë…¸ ê²Œì„******" << endl;
+						cout << "1-20ì‚¬ì´ì˜ ìˆ«ì 4ê°œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”" << endl;
 
 						int Casino_Check = Casino->Game_Casino();
 						if (Casino_Check == 0)
 						{
-							cout << "Ä«Áö³ë °ÔÀÓ¿¡¼­ ¼ıÀÚ 0°³¸¦ ¸ÂÃß¼Ì½À´Ï´Ù." << endl;
-							cout << "µ·À» ¾òÁö ¸øÇß¾î¿ä¤Ğ¤Ğ¤Ğ¤Ğ" << endl;
+							cout << "ì¹´ì§€ë…¸ ê²Œì„ì—ì„œ ìˆ«ì 0ê°œë¥¼ ë§ì¶”ì…¨ìŠµë‹ˆë‹¤." << endl;
+							cout << "ëˆì„ ì–»ì§€ ëª»í–ˆì–´ìš”ã… ã… ã… ã… " << endl;
 						}
 						else if (Casino_Check == 1)
 						{
-							cout << "Ä«Áö³ë °ÔÀÓ¿¡¼­ ¼ıÀÚ 1°³¸¦ ¸ÂÃß¼Ì½À´Ï´Ù." << endl;
-							cout << "µ·" << Casino->Pay() << "À» ¾ò¾ú½À´Ï´Ù." << endl;
+							cout << "ì¹´ì§€ë…¸ ê²Œì„ì—ì„œ ìˆ«ì 1ê°œë¥¼ ë§ì¶”ì…¨ìŠµë‹ˆë‹¤." << endl;
+							cout << "ëˆ" << Casino->Pay() << "ì„ ì–»ì—ˆìŠµë‹ˆë‹¤." << endl;
 							player[i].Setplayer_Money(Player_Money[i] + Casino->Pay());
 							Player_Money[i] = player[i].Getplayer_Money();
 						}
 						else if (Casino_Check == 2)
 						{
-							cout << "Ä«Áö³ë °ÔÀÓ¿¡¼­ ¼ıÀÚ 2°³¸¦ ¸ÂÃß¼Ì½À´Ï´Ù." << endl;
-							cout << "µ·" << 2 * (Casino->Pay()) << "À» ¾ò¾ú½À´Ï´Ù." << endl;
+							cout << "ì¹´ì§€ë…¸ ê²Œì„ì—ì„œ ìˆ«ì 2ê°œë¥¼ ë§ì¶”ì…¨ìŠµë‹ˆë‹¤." << endl;
+							cout << "ëˆ" << 2 * (Casino->Pay()) << "ì„ ì–»ì—ˆìŠµë‹ˆë‹¤." << endl;
 							player[i].Setplayer_Money(Player_Money[i] + 2 * (Casino->Pay()));
 							Player_Money[i] = player[i].Getplayer_Money();
 						}
 						else if (Casino_Check == 3)
 						{
-							cout << "Ä«Áö³ë °ÔÀÓ¿¡¼­ ¼ıÀÚ 3¸¦ ¸ÂÃß¼Ì½À´Ï´Ù." << endl;
-							cout << "µ·" << 4 * (Casino->Pay()) << "À» ¾ò¾ú½À´Ï´Ù." << endl;
+							cout << "ì¹´ì§€ë…¸ ê²Œì„ì—ì„œ ìˆ«ì 3ë¥¼ ë§ì¶”ì…¨ìŠµë‹ˆë‹¤." << endl;
+							cout << "ëˆ" << 4 * (Casino->Pay()) << "ì„ ì–»ì—ˆìŠµë‹ˆë‹¤." << endl;
 							player[i].Setplayer_Money(Player_Money[i] + 4 * (Casino->Pay()));
 							Player_Money[i] = player[i].Getplayer_Money();
 						}
 						else if (Casino_Check == 4)
 						{
-							cout << "Ä«Áö³ë °ÔÀÓ¿¡¼­ ¼ıÀÚ 4°³¸¦ ¸ÂÃß¼Ì½À´Ï´Ù." << endl;
-							cout << "µ·" << 8 * (Casino->Pay()) << "À» ¾ò¾ú½À´Ï´Ù." << endl;
+							cout << "ì¹´ì§€ë…¸ ê²Œì„ì—ì„œ ìˆ«ì 4ê°œë¥¼ ë§ì¶”ì…¨ìŠµë‹ˆë‹¤." << endl;
+							cout << "ëˆ" << 8 * (Casino->Pay()) << "ì„ ì–»ì—ˆìŠµë‹ˆë‹¤." << endl;
 							player[i].Setplayer_Money(Player_Money[i] + Casino->Pay());
 							Player_Money[i] = player[i].Getplayer_Money();
 						}
 					}
 
-					//Ä«Áö³ë¿¡¼­ÀÇ ÅÏ
+					//ì¹´ì§€ë…¸ì—ì„œì˜ í„´
 
 					else if (j == 12)
 					{
-						Map_Cashgame* Cashgame = (Map_Cashgame*)Space[j];
+						Map_Cashgame *Cashgame = (Map_Cashgame *)Space[j];
 
 						if (Cashgame->Game_Cashgame() == 1)
 						{
-							cout << "CASH GAME¿¡¼­ ÀÌ°å½À´Ï´Ù." << endl;
-							cout << "µ·" << Cashgame->Pay() << "À» ¾ò¾ú½À´Ï´Ù." << endl;
+							cout << "CASH GAMEì—ì„œ ì´ê²¼ìŠµë‹ˆë‹¤." << endl;
+							cout << "ëˆ" << Cashgame->Pay() << "ì„ ì–»ì—ˆìŠµë‹ˆë‹¤." << endl;
 							player[i].Setplayer_Money(Player_Money[i] + Cashgame->Pay());
 							Player_Money[i] = player[i].Getplayer_Money();
 						}
 						else if (Cashgame->Game_Cashgame() == 2)
 						{
-							cout << "CASH GAME¿¡¼­ ´ë¹Ú³µ¾î¿ä." << endl;
-							cout << "µ·" << (2 * Cashgame->Pay()) << "À» ¾ò¾ú½À´Ï´Ù." << endl;
+							cout << "CASH GAMEì—ì„œ ëŒ€ë°•ë‚¬ì–´ìš”." << endl;
+							cout << "ëˆ" << (2 * Cashgame->Pay()) << "ì„ ì–»ì—ˆìŠµë‹ˆë‹¤." << endl;
 							player[i].Setplayer_Money(Player_Money[i] + 2 * (Cashgame->Pay()));
 							Player_Money[i] = player[i].Getplayer_Money();
 						}
 						else
 						{
-							cout << "CASH GAME¿¡¼­ Á³½À´Ï´Ù." << endl;
-							cout << "µ·À» ¾òÁö ¸øÇß¾î¿ä¤Ğ¤Ğ" << endl;
+							cout << "CASH GAMEì—ì„œ ì¡ŒìŠµë‹ˆë‹¤." << endl;
+							cout << "ëˆì„ ì–»ì§€ ëª»í–ˆì–´ìš”ã… ã… " << endl;
 							Player_Money[i] = player[i].Getplayer_Money();
 						}
 					}
 
-					//CASHGAME¿¡¼­ÀÇ ÅÏ
+					//CASHGAMEì—ì„œì˜ í„´
 
 					else if (j == 18)
 					{
 						Double_check = 0;
 						if (player[i].GetPlayer_Turn() == 0)
 						{
-							cout << "!!!!!!°øÇ×¿¡ ¿Ô¾î¿ä!!!!!! ´ÙÀ½ÅÏ¿¡ ¼¼°è¿©ÇàÀ» ÇÒ ¼ö ÀÖ¾î¿ä" << endl;
+							cout << "!!!!!!ê³µí•­ì— ì™”ì–´ìš”!!!!!! ë‹¤ìŒí„´ì— ì„¸ê³„ì—¬í–‰ì„ í•  ìˆ˜ ìˆì–´ìš”" << endl;
 							player[i].SetPlayer_Turn(1);
 						}
 					}
 
-					//¼¼°è¿©Çà¿¡¼­ÀÇ ÅÏ
+					//ì„¸ê³„ì—¬í–‰ì—ì„œì˜ í„´
 
 					else
 					{
-						Map_World* World = (Map_World*)Space[j];
+						Map_World *World = (Map_World *)Space[j];
 						World->Map_Construcion(i, Player_Money[i], Toll, Land_Owner);
 						Player_Money[Land_Owner] += Toll;
 						player[Land_Owner].Setplayer_Money(Player_Money[Land_Owner]);
@@ -671,7 +653,7 @@ void Game::GAME()
 						{
 							for (int j = 0; j < 24; j++)
 							{
-								Map_World* Bankrupt_World = (Map_World*)Space[j];
+								Map_World *Bankrupt_World = (Map_World *)Space[j];
 								if (Bankrupt_World->GetLand_Owner() == i)
 								{
 									Bankrupt_World->Bankruptcy(i);
@@ -679,7 +661,6 @@ void Game::GAME()
 							}
 						}
 					}
-
 				}
 			}
 			if (player[i].Getplayer_Location() != 6 || player[i].Getplayer_Location() != 18)
@@ -695,22 +676,21 @@ void Game::GAME()
 				}
 				else if (Double_check == 3)
 				{
-					cout << "¤Ğ¤Ğ¤ĞÀÌ·±!! ¿¬¼Ó ¼¼¹øÀ¸·Î ´õºíÀÌ³×¿ä!!¤Ğ¤Ğ¤Ğ¤Ğ" << endl;
-					cout << "****¹«ÀÎµµ¿¡¼­ ½¯ ½Ã°£ÀÌ¿¡¿ä****" << endl;
+					cout << "ã… ã… ã… ì´ëŸ°!! ì—°ì† ì„¸ë²ˆìœ¼ë¡œ ë”ë¸”ì´ë„¤ìš”!!ã… ã… ã… ã… " << endl;
+					cout << "****ë¬´ì¸ë„ì—ì„œ ì‰´ ì‹œê°„ì´ì—ìš”****" << endl;
 					Double_check = 0;
 				}
 			}
-			//ÁÖ»çÀ§ ´õºí È®ÀÎ ÇÔ¼ö
+			//ì£¼ì‚¬ìœ„ ë”ë¸” í™•ì¸ í•¨ìˆ˜
 
 			if (i == Player_Number - 1)
 			{
 				i = -1;
 			}
-			//PlayerÂ÷·Ê¸¦ ¹İº¹½ÃÅ°±â À§ÇÑ ÇÔ¼ö
+			//Playerì°¨ë¡€ë¥¼ ë°˜ë³µì‹œí‚¤ê¸° ìœ„í•œ í•¨ìˆ˜
 			Sleep(500);
 		}
 		delete[] player;
 		delete[] Player_Money;
-
 	}
 }

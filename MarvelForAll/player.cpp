@@ -1,15 +1,13 @@
 #include "player.h"
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 #include <ctime>
-#include<cstdlib>
+#include <cstdlib>
 
 using namespace std;
 
-
 int Player::Getplayer_Money() { return Player_Money; }
-//ÇÃ·¹ÀÌ¾îÀÇ µ·¿¡ Á¢±ÙÇÏ±â
-
+//í”Œë ˆì´ì–´ì˜ ëˆì— ì ‘ê·¼í•˜ê¸°
 
 void Player::SetPlayer(int Player_Money_, int Player_Location_, int Player_Turn_)
 {
@@ -18,47 +16,49 @@ void Player::SetPlayer(int Player_Money_, int Player_Location_, int Player_Turn_
 	Player_Turn = Player_Turn_;
 }
 
-void Player::Setplayer_Money(int Player_Money_) {
+void Player::Setplayer_Money(int Player_Money_)
+{
 	Player_Money = Player_Money_;
 };
 
-//ÇÃ·¹ÀÌ¾îÀÇ µ·À» ¼³Á¤ÇÏ±â
-
+//í”Œë ˆì´ì–´ì˜ ëˆì„ ì„¤ì •í•˜ê¸°
 
 int Player::GetPlayer_Turn() { return Player_Turn; }
 
-//ÇÃ·¹ÀÌ¾î ÅÏ¼ö·Î ¹«ÀÎµµ,¼¼°è¿©Çà ±¸º°
+//í”Œë ˆì´ì–´ í„´ìˆ˜ë¡œ ë¬´ì¸ë„,ì„¸ê³„ì—¬í–‰ êµ¬ë³„
 
-void Player::SetPlayer_Turn(int Player_Turn_) {
+void Player::SetPlayer_Turn(int Player_Turn_)
+{
 	Player_Turn = Player_Turn_;
 }
 
-int Player::Player_Dice1(int rannum) {
+int Player::Player_Dice1(int rannum)
+{
 
 	srand((unsigned int)time(NULL));
 	return rannum;
-
 };
 
-int Player::Player_Dice2(int rannum) {
+int Player::Player_Dice2(int rannum)
+{
 
-	
 	return rannum;
 }
 
-//ÇÃ·¹ÀÌ¾îÀÇ ÁÖ»çÀ§ ±¼¸®±â
+//í”Œë ˆì´ì–´ì˜ ì£¼ì‚¬ìœ„ êµ´ë¦¬ê¸°
 
 int Player::Getplayer_Location() { return Player_Location; };
 
-//ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡¿¡ Á¢±ÙÇÏ±â
+//í”Œë ˆì´ì–´ì˜ ìœ„ì¹˜ì— ì ‘ê·¼í•˜ê¸°
 
 void Player::SetWorldtour_Location(int Player_Location_)
 {
 	Player_Location = Player_Location_;
 }
 
-int Player::Setplayer_Location(int dice1,int dice2) {
-	Player_Location += dice1+dice2;
+int Player::Setplayer_Location(int dice1, int dice2)
+{
+	Player_Location += dice1 + dice2;
 	if (Player_Location >= 24)
 	{
 		Player_Location -= 24;
@@ -68,7 +68,5 @@ int Player::Setplayer_Location(int dice1,int dice2) {
 	return Player_Location;
 };
 
-
-
-//ÇÃ·¹ÀÌ¾î°¡ ÁÖ»çÀ§¸¦ ´øÁ®¼­ ³ª¿Â ¼ö¸¦ ÀÌ¿ëÇÑ À§Ä¡ ¼³Á¤
-//ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡ ¼³Á¤(ÁÖ»çÀ§ ´øÁø ¸¸Å­ )
+//í”Œë ˆì´ì–´ê°€ ì£¼ì‚¬ìœ„ë¥¼ ë˜ì ¸ì„œ ë‚˜ì˜¨ ìˆ˜ë¥¼ ì´ìš©í•œ ìœ„ì¹˜ ì„¤ì •
+//í”Œë ˆì´ì–´ì˜ ìœ„ì¹˜ ì„¤ì •(ì£¼ì‚¬ìœ„ ë˜ì§„ ë§Œí¼ )

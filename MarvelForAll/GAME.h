@@ -2,9 +2,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
-#include<cstdlib>
-
-
+#include <cstdlib>
 
 using namespace std;
 
@@ -13,6 +11,7 @@ class Game
 private:
 	int command;
 	string map;
+
 public:
 	void GAME();
 	void Map_image1();
@@ -25,5 +24,5 @@ public:
 	void MapImage_All();
 	void Setting_marvel();
 	void Player_image(int Player_number, int Player_money);
-	void PlayerLocation_image(int i,int k);
+	void PlayerLocation_image(int i, int k);
 };
